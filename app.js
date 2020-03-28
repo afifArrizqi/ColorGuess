@@ -10,7 +10,6 @@ let   circleColor     = [],
 start();
 
 resetButon.addEventListener("click", function(){
-  difficultyButon[0].classList.contains("active") ? heart = 5 : heart = 2;
   reset();
 });
 
@@ -21,6 +20,7 @@ function start(){
 }
 
 function reset(){
+  difficultyButon[0].classList.contains("active") ? heart = 5 : heart = 2;
   message.innerHTML = heartPrint(); 
   circleColor = spreadColors();
   for(let i = 0; i < circles.length; i++){
@@ -28,6 +28,7 @@ function reset(){
     circles[i].style.backgroundColor = circleColor[i];
   }
   rgbDisplay.innerHTML = circleColor[colorDisplayDistributor()];
+  header.style.backgroundColor = "#62cb52"
 }
   
   
